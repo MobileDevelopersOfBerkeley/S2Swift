@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7700AE781CCFDC7C00606F25 /* R1Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED2C1CCAB37C00C543EC /* R1Interval.swift */; };
+		7700AE7B1CD013DB00606F25 /* R2Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED2E1CCAB38900C543EC /* R2Rect.swift */; };
+		7700AE7E1CD0257000606F25 /* R3Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED301CCAB38F00C543EC /* R3Vector.swift */; };
+		7700AE961CD04FCF00606F25 /* S1Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED421CCAC90600C543EC /* S1Angle.swift */; };
+		7700AE981CD04FCF00606F25 /* S1Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED471CCAC92C00C543EC /* S1Interval.swift */; };
+		7700AE991CD04FCF00606F25 /* S2LatLng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED4A1CCAD86200C543EC /* S2LatLng.swift */; };
+		7700AE9A1CD04FCF00606F25 /* S2Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED4D1CCADC0000C543EC /* S2Point.swift */; };
+		7700AE9B1CD04FCF00606F25 /* S2Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED541CCB0B3D00C543EC /* S2Region.swift */; };
+		7700AE9C1CD04FCF00606F25 /* S2Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EE8FE1CCBF83F00BE111F /* S2Shape.swift */; };
+		7700AE9D1CD04FCF00606F25 /* S2Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED521CCB0B0700C543EC /* S2Rect.swift */; };
+		7700AE9E1CD04FCF00606F25 /* S2Loop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED561CCB0B8900C543EC /* S2Loop.swift */; };
+		7700AE9F1CD04FCF00606F25 /* S2Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED501CCB0AE400C543EC /* S2Polygon.swift */; };
+		7700AEA01CD04FCF00606F25 /* S2Cap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED681CCB0C0000C543EC /* S2Cap.swift */; };
+		7700AEA11CD04FCF00606F25 /* S2Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED661CCB0BE700C543EC /* S2Metric.swift */; };
+		7700AEA31CD04FCF00606F25 /* S2CellId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EE8FC1CCBDDDC00BE111F /* S2CellId.swift */; };
+		7700AEA41CD04FCF00606F25 /* S2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EE8FA1CCBD7FF00BE111F /* S2Cell.swift */; };
+		7700AEA51CD04FCF00606F25 /* S2CellUnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EE9001CCC000300BE111F /* S2CellUnion.swift */; };
+		7700AEA61CD04FCF00606F25 /* S2EdgeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EE9021CCC03FD00BE111F /* S2EdgeUtility.swift */; };
+		7700AEA71CD04FCF00606F25 /* S2Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772EBA371CCC4FAC005D39AC /* S2Matrix.swift */; };
+		7700AEAA1CD04FD400606F25 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701F8221CCD5E2C0013898B /* PriorityQueue.swift */; };
+		7701F8231CCD5E2C0013898B /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701F8221CCD5E2C0013898B /* PriorityQueue.swift */; };
+		7705EBB61E2EC8E800F1151A /* R1IntervalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705EBB21E2EC8E800F1151A /* R1IntervalTests.swift */; };
+		7705EBB71E2EC8E800F1151A /* R2RectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705EBB31E2EC8E800F1151A /* R2RectTests.swift */; };
+		7705EBB81E2EC8E800F1151A /* R3VectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705EBB41E2EC8E800F1151A /* R3VectorTests.swift */; };
+		7705EBC01E2EC8FA00F1151A /* S1IntervalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705EBB91E2EC8FA00F1151A /* S1IntervalTests.swift */; };
+		7705EBC11E2EC8FA00F1151A /* S2CapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705EBBA1E2EC8FA00F1151A /* S2CapTests.swift */; };
+		7705EBC21E2EC8FA00F1151A /* S2CellIdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705EBBB1E2EC8FA00F1151A /* S2CellIdTests.swift */; };
+		7705EBC31E2EC8FA00F1151A /* S2CellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705EBBC1E2EC8FA00F1151A /* S2CellTests.swift */; };
+		7705EBC41E2EC8FA00F1151A /* S2CellUnionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705EBBD1E2EC8FA00F1151A /* S2CellUnionTests.swift */; };
+		7705EBC51E2EC8FA00F1151A /* S2LatLngTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705EBBE1E2EC8FA00F1151A /* S2LatLngTests.swift */; };
+		771221061E7B2866003B62C8 /* S2PolygonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771221051E7B2866003B62C8 /* S2PolygonTests.swift */; };
+		771221081E7B2898003B62C8 /* S2PolylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771221071E7B2898003B62C8 /* S2PolylineTests.swift */; };
+		771DD34F1E2EC9D800F5DEDE /* S2MetricTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771DD34D1E2EC9D800F5DEDE /* S2MetricTests.swift */; };
+		771EE8FB1CCBD7FF00BE111F /* S2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EE8FA1CCBD7FF00BE111F /* S2Cell.swift */; };
+		771EE8FD1CCBDDDC00BE111F /* S2CellId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EE8FC1CCBDDDC00BE111F /* S2CellId.swift */; };
+		771EE8FF1CCBF83F00BE111F /* S2Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EE8FE1CCBF83F00BE111F /* S2Shape.swift */; };
+		771EE9011CCC000300BE111F /* S2CellUnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EE9001CCC000300BE111F /* S2CellUnion.swift */; };
+		771EE9031CCC03FD00BE111F /* S2EdgeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EE9021CCC03FD00BE111F /* S2EdgeUtility.swift */; };
+		772EBA381CCC4FAC005D39AC /* S2Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772EBA371CCC4FAC005D39AC /* S2Matrix.swift */; };
+		77633A161E2ECA2900497830 /* S2RegionCovererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77633A131E2ECA2900497830 /* S2RegionCovererTests.swift */; };
+		77633A171E2ECA2900497830 /* S2ShapeIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77633A141E2ECA2900497830 /* S2ShapeIndexTests.swift */; };
+		7770ED3F1CCAC21C00C543EC /* R1Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED2C1CCAB37C00C543EC /* R1Interval.swift */; };
+		7770ED401CCAC21C00C543EC /* R2Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED2E1CCAB38900C543EC /* R2Rect.swift */; };
+		7770ED411CCAC21C00C543EC /* R3Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED301CCAB38F00C543EC /* R3Vector.swift */; };
+		7770ED5D1CCB0BCF00C543EC /* S1Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED421CCAC90600C543EC /* S1Angle.swift */; };
+		7770ED5F1CCB0BCF00C543EC /* S1Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED471CCAC92C00C543EC /* S1Interval.swift */; };
+		7770ED601CCB0BCF00C543EC /* S2LatLng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED4A1CCAD86200C543EC /* S2LatLng.swift */; };
+		7770ED611CCB0BCF00C543EC /* S2Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED4D1CCADC0000C543EC /* S2Point.swift */; };
+		7770ED621CCB0BCF00C543EC /* S2Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED501CCB0AE400C543EC /* S2Polygon.swift */; };
+		7770ED631CCB0BCF00C543EC /* S2Loop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED561CCB0B8900C543EC /* S2Loop.swift */; };
+		7770ED641CCB0BCF00C543EC /* S2Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED521CCB0B0700C543EC /* S2Rect.swift */; };
+		7770ED651CCB0BCF00C543EC /* S2Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED541CCB0B3D00C543EC /* S2Region.swift */; };
+		7770ED671CCB0BE700C543EC /* S2Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED661CCB0BE700C543EC /* S2Metric.swift */; };
+		7770ED691CCB0C0000C543EC /* S2Cap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770ED681CCB0C0000C543EC /* S2Cap.swift */; };
+		777BBA9E1E30253600514AD7 /* S2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BBA9D1E30253600514AD7 /* S2Tests.swift */; };
+		779A2CEB1D0C8D8B0067EB78 /* S2Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A2CEA1D0C8D8B0067EB78 /* S2Cube.swift */; };
+		779A2CEC1D0C8DA40067EB78 /* S2Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A2CEA1D0C8D8B0067EB78 /* S2Cube.swift */; };
+		77A3E5911E347823004DB619 /* S2Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3E5901E347823004DB619 /* S2Polyline.swift */; };
+		77B111041E2ECA5C0032B28C /* S2PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B111031E2ECA5C0032B28C /* S2PointTests.swift */; };
+		77D260F41E2EC9AE0020C806 /* S2LoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D260F31E2EC9AE0020C806 /* S2LoopTests.swift */; };
+		77E163EA1CF3B78400D51F5B /* S2RegionCoverer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701F8201CCD57070013898B /* S2RegionCoverer.swift */; };
+		77E163EC1CF3B78400D51F5B /* S2RegionCoverer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701F8201CCD57070013898B /* S2RegionCoverer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7700AE6B1CCFD15200606F25 /* Sphere2GoLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sphere2GoLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7701F8201CCD57070013898B /* S2RegionCoverer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2RegionCoverer.swift; sourceTree = "<group>"; };
+		7701F8221CCD5E2C0013898B /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		7705EBB11E2EC8E800F1151A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7705EBB21E2EC8E800F1151A /* R1IntervalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R1IntervalTests.swift; sourceTree = "<group>"; };
+		7705EBB31E2EC8E800F1151A /* R2RectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2RectTests.swift; sourceTree = "<group>"; };
+		7705EBB41E2EC8E800F1151A /* R3VectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R3VectorTests.swift; sourceTree = "<group>"; };
+		7705EBB91E2EC8FA00F1151A /* S1IntervalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S1IntervalTests.swift; sourceTree = "<group>"; };
+		7705EBBA1E2EC8FA00F1151A /* S2CapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2CapTests.swift; sourceTree = "<group>"; };
+		7705EBBB1E2EC8FA00F1151A /* S2CellIdTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2CellIdTests.swift; sourceTree = "<group>"; };
+		7705EBBC1E2EC8FA00F1151A /* S2CellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2CellTests.swift; sourceTree = "<group>"; };
+		7705EBBD1E2EC8FA00F1151A /* S2CellUnionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2CellUnionTests.swift; sourceTree = "<group>"; };
+		7705EBBE1E2EC8FA00F1151A /* S2LatLngTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2LatLngTests.swift; sourceTree = "<group>"; };
+		771221051E7B2866003B62C8 /* S2PolygonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2PolygonTests.swift; sourceTree = "<group>"; };
+		771221071E7B2898003B62C8 /* S2PolylineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2PolylineTests.swift; sourceTree = "<group>"; };
+		771DD34D1E2EC9D800F5DEDE /* S2MetricTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2MetricTests.swift; sourceTree = "<group>"; };
+		771EE8FA1CCBD7FF00BE111F /* S2Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Cell.swift; sourceTree = "<group>"; };
+		771EE8FC1CCBDDDC00BE111F /* S2CellId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2CellId.swift; sourceTree = "<group>"; };
+		771EE8FE1CCBF83F00BE111F /* S2Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Shape.swift; sourceTree = "<group>"; };
+		771EE9001CCC000300BE111F /* S2CellUnion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2CellUnion.swift; sourceTree = "<group>"; };
+		771EE9021CCC03FD00BE111F /* S2EdgeUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2EdgeUtility.swift; sourceTree = "<group>"; };
+		772EBA371CCC4FAC005D39AC /* S2Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Matrix.swift; sourceTree = "<group>"; };
+		77633A131E2ECA2900497830 /* S2RegionCovererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2RegionCovererTests.swift; sourceTree = "<group>"; };
+		77633A141E2ECA2900497830 /* S2ShapeIndexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2ShapeIndexTests.swift; sourceTree = "<group>"; };
+		7770ED2C1CCAB37C00C543EC /* R1Interval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R1Interval.swift; sourceTree = "<group>"; };
+		7770ED2E1CCAB38900C543EC /* R2Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2Rect.swift; sourceTree = "<group>"; };
+		7770ED301CCAB38F00C543EC /* R3Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R3Vector.swift; sourceTree = "<group>"; };
+		7770ED371CCAC21100C543EC /* Sphere2GoLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sphere2GoLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7770ED391CCAC21100C543EC /* Sphere2Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sphere2Lib.h; sourceTree = "<group>"; };
+		7770ED3B1CCAC21100C543EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7770ED421CCAC90600C543EC /* S1Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S1Angle.swift; sourceTree = "<group>"; };
+		7770ED471CCAC92C00C543EC /* S1Interval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S1Interval.swift; sourceTree = "<group>"; };
+		7770ED4A1CCAD86200C543EC /* S2LatLng.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2LatLng.swift; sourceTree = "<group>"; };
+		7770ED4D1CCADC0000C543EC /* S2Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Point.swift; sourceTree = "<group>"; };
+		7770ED501CCB0AE400C543EC /* S2Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Polygon.swift; sourceTree = "<group>"; };
+		7770ED521CCB0B0700C543EC /* S2Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Rect.swift; sourceTree = "<group>"; };
+		7770ED541CCB0B3D00C543EC /* S2Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Region.swift; sourceTree = "<group>"; };
+		7770ED561CCB0B8900C543EC /* S2Loop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Loop.swift; sourceTree = "<group>"; };
+		7770ED661CCB0BE700C543EC /* S2Metric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Metric.swift; sourceTree = "<group>"; };
+		7770ED681CCB0C0000C543EC /* S2Cap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Cap.swift; sourceTree = "<group>"; };
+		777BBA9D1E30253600514AD7 /* S2Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Tests.swift; sourceTree = "<group>"; };
+		779A2CEA1D0C8D8B0067EB78 /* S2Cube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Cube.swift; sourceTree = "<group>"; };
+		77A3E5901E347823004DB619 /* S2Polyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2Polyline.swift; sourceTree = "<group>"; };
+		77B111031E2ECA5C0032B28C /* S2PointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2PointTests.swift; sourceTree = "<group>"; };
+		77D260F31E2EC9AE0020C806 /* S2LoopTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2LoopTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7700AE681CCFD15200606F25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7770ED331CCAC21100C543EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7700AE6C1CCFD15200606F25 /* Sphere2LibTests */ = {
+			isa = PBXGroup;
+			children = (
+				7705EBB11E2EC8E800F1151A /* Info.plist */,
+				777BBA9D1E30253600514AD7 /* S2Tests.swift */,
+				7784CE761E7CB13A007D91D7 /* r */,
+				7784CE771E7CB143007D91D7 /* s */,
+			);
+			name = Sphere2LibTests;
+			path = Sphere2GoLibTests;
+			sourceTree = "<group>";
+		};
+		7770ED151CCAB33000C543EC = {
+			isa = PBXGroup;
+			children = (
+				7770ED201CCAB33000C543EC /* Sphere2 */,
+				7770ED381CCAC21100C543EC /* Sphere2Lib */,
+				7700AE6C1CCFD15200606F25 /* Sphere2LibTests */,
+				7770ED1F1CCAB33000C543EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7770ED1F1CCAB33000C543EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7770ED371CCAC21100C543EC /* Sphere2GoLib.framework */,
+				7700AE6B1CCFD15200606F25 /* Sphere2GoLibTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7770ED201CCAB33000C543EC /* Sphere2 */ = {
+			isa = PBXGroup;
+			children = (
+				7701F8221CCD5E2C0013898B /* PriorityQueue.swift */,
+				7770ED2A1CCAB34500C543EC /* r */,
+				7770ED2B1CCAB35800C543EC /* s */,
+			);
+			name = Sphere2;
+			path = Sphere2Go;
+			sourceTree = "<group>";
+		};
+		7770ED2A1CCAB34500C543EC /* r */ = {
+			isa = PBXGroup;
+			children = (
+				7770ED2C1CCAB37C00C543EC /* R1Interval.swift */,
+				7770ED2E1CCAB38900C543EC /* R2Rect.swift */,
+				7770ED301CCAB38F00C543EC /* R3Vector.swift */,
+			);
+			name = r;
+			sourceTree = "<group>";
+		};
+		7770ED2B1CCAB35800C543EC /* s */ = {
+			isa = PBXGroup;
+			children = (
+				7770ED421CCAC90600C543EC /* S1Angle.swift */,
+				7770ED471CCAC92C00C543EC /* S1Interval.swift */,
+				7770ED4A1CCAD86200C543EC /* S2LatLng.swift */,
+				7770ED4D1CCADC0000C543EC /* S2Point.swift */,
+				779A2CEA1D0C8D8B0067EB78 /* S2Cube.swift */,
+				7770ED541CCB0B3D00C543EC /* S2Region.swift */,
+				771EE8FE1CCBF83F00BE111F /* S2Shape.swift */,
+				7770ED521CCB0B0700C543EC /* S2Rect.swift */,
+				7770ED561CCB0B8900C543EC /* S2Loop.swift */,
+				77A3E5901E347823004DB619 /* S2Polyline.swift */,
+				7770ED501CCB0AE400C543EC /* S2Polygon.swift */,
+				7770ED681CCB0C0000C543EC /* S2Cap.swift */,
+				7770ED661CCB0BE700C543EC /* S2Metric.swift */,
+				771EE8FC1CCBDDDC00BE111F /* S2CellId.swift */,
+				771EE8FA1CCBD7FF00BE111F /* S2Cell.swift */,
+				771EE9001CCC000300BE111F /* S2CellUnion.swift */,
+				771EE9021CCC03FD00BE111F /* S2EdgeUtility.swift */,
+				772EBA371CCC4FAC005D39AC /* S2Matrix.swift */,
+				7701F8201CCD57070013898B /* S2RegionCoverer.swift */,
+			);
+			name = s;
+			sourceTree = "<group>";
+		};
+		7770ED381CCAC21100C543EC /* Sphere2Lib */ = {
+			isa = PBXGroup;
+			children = (
+				7770ED3B1CCAC21100C543EC /* Info.plist */,
+				7770ED391CCAC21100C543EC /* Sphere2Lib.h */,
+			);
+			name = Sphere2Lib;
+			path = Sphere2GoLib;
+			sourceTree = "<group>";
+		};
+		7784CE761E7CB13A007D91D7 /* r */ = {
+			isa = PBXGroup;
+			children = (
+				7705EBB21E2EC8E800F1151A /* R1IntervalTests.swift */,
+				7705EBB31E2EC8E800F1151A /* R2RectTests.swift */,
+				7705EBB41E2EC8E800F1151A /* R3VectorTests.swift */,
+			);
+			name = r;
+			sourceTree = "<group>";
+		};
+		7784CE771E7CB143007D91D7 /* s */ = {
+			isa = PBXGroup;
+			children = (
+				7705EBB91E2EC8FA00F1151A /* S1IntervalTests.swift */,
+				7705EBBA1E2EC8FA00F1151A /* S2CapTests.swift */,
+				7705EBBB1E2EC8FA00F1151A /* S2CellIdTests.swift */,
+				7705EBBC1E2EC8FA00F1151A /* S2CellTests.swift */,
+				7705EBBD1E2EC8FA00F1151A /* S2CellUnionTests.swift */,
+				7705EBBE1E2EC8FA00F1151A /* S2LatLngTests.swift */,
+				77D260F31E2EC9AE0020C806 /* S2LoopTests.swift */,
+				77B111031E2ECA5C0032B28C /* S2PointTests.swift */,
+				771DD34D1E2EC9D800F5DEDE /* S2MetricTests.swift */,
+				77633A131E2ECA2900497830 /* S2RegionCovererTests.swift */,
+				77633A141E2ECA2900497830 /* S2ShapeIndexTests.swift */,
+				771221051E7B2866003B62C8 /* S2PolygonTests.swift */,
+				771221071E7B2898003B62C8 /* S2PolylineTests.swift */,
+			);
+			name = s;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7770ED341CCAC21100C543EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7700AE6A1CCFD15200606F25 /* Sphere2GoLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7700AE751CCFD15200606F25 /* Build configuration list for PBXNativeTarget "Sphere2GoLibTests" */;
+			buildPhases = (
+				7700AE671CCFD15200606F25 /* Sources */,
+				7700AE681CCFD15200606F25 /* Frameworks */,
+				7700AE691CCFD15200606F25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sphere2GoLibTests;
+			productName = Sphere2GoLibTests;
+			productReference = 7700AE6B1CCFD15200606F25 /* Sphere2GoLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7770ED361CCAC21100C543EC /* Sphere2GoLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7770ED3C1CCAC21100C543EC /* Build configuration list for PBXNativeTarget "Sphere2GoLib" */;
+			buildPhases = (
+				7770ED321CCAC21100C543EC /* Sources */,
+				7770ED331CCAC21100C543EC /* Frameworks */,
+				7770ED341CCAC21100C543EC /* Headers */,
+				7770ED351CCAC21100C543EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sphere2GoLib;
+			productName = Sphere2GoLib;
+			productReference = 7770ED371CCAC21100C543EC /* Sphere2GoLib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7770ED161CCAB33000C543EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Axel Huesemann";
+				TargetAttributes = {
+					7700AE6A1CCFD15200606F25 = {
+						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
+					};
+					7770ED361CCAC21100C543EC = {
+						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 7770ED191CCAB33000C543EC /* Build configuration list for PBXProject "Sphere2Go" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7770ED151CCAB33000C543EC;
+			productRefGroup = 7770ED1F1CCAB33000C543EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7770ED361CCAC21100C543EC /* Sphere2GoLib */,
+				7700AE6A1CCFD15200606F25 /* Sphere2GoLibTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7700AE691CCFD15200606F25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7770ED351CCAC21100C543EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7700AE671CCFD15200606F25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7700AEA61CD04FCF00606F25 /* S2EdgeUtility.swift in Sources */,
+				7700AEA71CD04FCF00606F25 /* S2Matrix.swift in Sources */,
+				7700AEA31CD04FCF00606F25 /* S2CellId.swift in Sources */,
+				77B111041E2ECA5C0032B28C /* S2PointTests.swift in Sources */,
+				777BBA9E1E30253600514AD7 /* S2Tests.swift in Sources */,
+				77E163EC1CF3B78400D51F5B /* S2RegionCoverer.swift in Sources */,
+				7705EBC01E2EC8FA00F1151A /* S1IntervalTests.swift in Sources */,
+				7700AE9A1CD04FCF00606F25 /* S2Point.swift in Sources */,
+				7700AE9B1CD04FCF00606F25 /* S2Region.swift in Sources */,
+				7700AE9D1CD04FCF00606F25 /* S2Rect.swift in Sources */,
+				7700AE981CD04FCF00606F25 /* S1Interval.swift in Sources */,
+				7700AE7B1CD013DB00606F25 /* R2Rect.swift in Sources */,
+				7705EBC51E2EC8FA00F1151A /* S2LatLngTests.swift in Sources */,
+				7700AEA41CD04FCF00606F25 /* S2Cell.swift in Sources */,
+				7705EBC21E2EC8FA00F1151A /* S2CellIdTests.swift in Sources */,
+				7700AEAA1CD04FD400606F25 /* PriorityQueue.swift in Sources */,
+				7705EBC11E2EC8FA00F1151A /* S2CapTests.swift in Sources */,
+				771221061E7B2866003B62C8 /* S2PolygonTests.swift in Sources */,
+				7700AEA01CD04FCF00606F25 /* S2Cap.swift in Sources */,
+				7705EBB81E2EC8E800F1151A /* R3VectorTests.swift in Sources */,
+				7705EBC41E2EC8FA00F1151A /* S2CellUnionTests.swift in Sources */,
+				7700AE961CD04FCF00606F25 /* S1Angle.swift in Sources */,
+				7700AE9E1CD04FCF00606F25 /* S2Loop.swift in Sources */,
+				7705EBB61E2EC8E800F1151A /* R1IntervalTests.swift in Sources */,
+				7705EBC31E2EC8FA00F1151A /* S2CellTests.swift in Sources */,
+				77633A171E2ECA2900497830 /* S2ShapeIndexTests.swift in Sources */,
+				77633A161E2ECA2900497830 /* S2RegionCovererTests.swift in Sources */,
+				7700AE9C1CD04FCF00606F25 /* S2Shape.swift in Sources */,
+				7700AE991CD04FCF00606F25 /* S2LatLng.swift in Sources */,
+				7705EBB71E2EC8E800F1151A /* R2RectTests.swift in Sources */,
+				771221081E7B2898003B62C8 /* S2PolylineTests.swift in Sources */,
+				771DD34F1E2EC9D800F5DEDE /* S2MetricTests.swift in Sources */,
+				7700AE7E1CD0257000606F25 /* R3Vector.swift in Sources */,
+				7700AEA51CD04FCF00606F25 /* S2CellUnion.swift in Sources */,
+				7700AE9F1CD04FCF00606F25 /* S2Polygon.swift in Sources */,
+				7700AEA11CD04FCF00606F25 /* S2Metric.swift in Sources */,
+				7700AE781CCFDC7C00606F25 /* R1Interval.swift in Sources */,
+				77D260F41E2EC9AE0020C806 /* S2LoopTests.swift in Sources */,
+				779A2CEC1D0C8DA40067EB78 /* S2Cube.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7770ED321CCAC21100C543EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7770ED3F1CCAC21C00C543EC /* R1Interval.swift in Sources */,
+				77E163EA1CF3B78400D51F5B /* S2RegionCoverer.swift in Sources */,
+				7701F8231CCD5E2C0013898B /* PriorityQueue.swift in Sources */,
+				7770ED601CCB0BCF00C543EC /* S2LatLng.swift in Sources */,
+				779A2CEB1D0C8D8B0067EB78 /* S2Cube.swift in Sources */,
+				771EE8FD1CCBDDDC00BE111F /* S2CellId.swift in Sources */,
+				7770ED411CCAC21C00C543EC /* R3Vector.swift in Sources */,
+				771EE8FF1CCBF83F00BE111F /* S2Shape.swift in Sources */,
+				7770ED401CCAC21C00C543EC /* R2Rect.swift in Sources */,
+				7770ED671CCB0BE700C543EC /* S2Metric.swift in Sources */,
+				771EE9031CCC03FD00BE111F /* S2EdgeUtility.swift in Sources */,
+				77A3E5911E347823004DB619 /* S2Polyline.swift in Sources */,
+				7770ED5F1CCB0BCF00C543EC /* S1Interval.swift in Sources */,
+				7770ED691CCB0C0000C543EC /* S2Cap.swift in Sources */,
+				7770ED641CCB0BCF00C543EC /* S2Rect.swift in Sources */,
+				7770ED5D1CCB0BCF00C543EC /* S1Angle.swift in Sources */,
+				772EBA381CCC4FAC005D39AC /* S2Matrix.swift in Sources */,
+				7770ED611CCB0BCF00C543EC /* S2Point.swift in Sources */,
+				771EE9011CCC000300BE111F /* S2CellUnion.swift in Sources */,
+				7770ED631CCB0BCF00C543EC /* S2Loop.swift in Sources */,
+				771EE8FB1CCBD7FF00BE111F /* S2Cell.swift in Sources */,
+				7770ED651CCB0BCF00C543EC /* S2Region.swift in Sources */,
+				7770ED621CCB0BCF00C543EC /* S2Polygon.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7700AE731CCFD15200606F25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Sphere2GoLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.here.Sphere2GoLibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7700AE741CCFD15200606F25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Sphere2GoLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.here.Sphere2GoLibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		7770ED251CCAB33000C543EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7770ED261CCAB33000C543EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7770ED3D1CCAC21100C543EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sphere2GoLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.here.Sphere2GoLib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7770ED3E1CCAC21100C543EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sphere2GoLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.here.Sphere2GoLib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7700AE751CCFD15200606F25 /* Build configuration list for PBXNativeTarget "Sphere2GoLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7700AE731CCFD15200606F25 /* Debug */,
+				7700AE741CCFD15200606F25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7770ED191CCAB33000C543EC /* Build configuration list for PBXProject "Sphere2Go" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7770ED251CCAB33000C543EC /* Debug */,
+				7770ED261CCAB33000C543EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7770ED3C1CCAC21100C543EC /* Build configuration list for PBXNativeTarget "Sphere2GoLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7770ED3D1CCAC21100C543EC /* Debug */,
+				7770ED3E1CCAC21100C543EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7770ED161CCAB33000C543EC /* Project object */;
+}
