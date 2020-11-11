@@ -38,7 +38,12 @@ struct R1Interval: Equatable, CustomStringConvertible {
   static let empty = R1Interval(lo:1.0, hi: 0.0)
   
   // MARK: protocols
-  
+
+  static func ==(lhs: R1Interval, rhs: R1Interval) -> Bool {
+    // returns true iff the intervals contains the same points
+    return lhs.lo == rhs.lo && lhs.hi == rhs.hi || (lhs.isEmpty() && rhs.isEmpty())
+  }
+
   var description: String {
     let l = String(format: "%.7f", lo)
     let h = String(format: "%.7f", hi)
@@ -51,12 +56,7 @@ struct R1Interval: Equatable, CustomStringConvertible {
   func isEmpty() -> Bool {
     return lo > hi
   }
-  
-  // Equal returns true iff the interval contains the same points as other.
-  func equals(_ interval: R1Interval) -> Bool {
-    return lo == interval.lo && hi == interval.hi || isEmpty() && interval.isEmpty()
-  }
-  
+    
   // Contains returns true iff the interval contains p.
   func contains(_ point: Double) -> Bool {
     return lo <= point && point <= hi
@@ -175,8 +175,4 @@ struct R1Interval: Equatable, CustomStringConvertible {
     return R1Interval(lo: min(lo, interval.lo), hi: max(hi, interval.hi))
   }
   
-}
-
-func ==(lhs: R1Interval, rhs: R1Interval) -> Bool {
-  return lhs.lo == rhs.lo && lhs.hi == rhs.hi || (lhs.isEmpty() && rhs.isEmpty())
 }

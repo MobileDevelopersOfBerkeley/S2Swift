@@ -57,11 +57,6 @@ let detErrorMultiplier = 7.1767e-16
 //
 // Fields should be treated as read-only. Use one of the factory methods for creation.
 
-func ==(lhs: S2Point, rhs: S2Point) -> Bool {
-  return lhs.x == rhs.x && lhs.y == rhs.y && lhs.z == rhs.z
-}
-
-
 // S2Point represents a point in RxRxR.
 struct S2Point: Equatable, CustomStringConvertible, Hashable {
   
@@ -146,10 +141,10 @@ struct S2Point: Equatable, CustomStringConvertible, Hashable {
     return "(\(x), \(y), \(z))"
   }
   
-  var hashValue: Int {
-    return x.hashValue ^ y.hashValue ^ z.hashValue
+  static func ==(lhs: S2Point, rhs: S2Point) -> Bool {
+    return lhs.x == rhs.x && lhs.y == rhs.y && lhs.z == rhs.z
   }
-  
+
   // MARK: tests
   
   // ApproxEqual reports whether v and other are equal within a small epsilon.

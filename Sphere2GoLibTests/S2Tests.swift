@@ -71,7 +71,7 @@ func randomUInt32() -> UInt32 {
 // not all possible values in this range are returned.
 func randomFloat64() -> Double {
   let randomFloatBits = UInt32(53)
-	return ldexp(Double(randomBits(num: randomFloatBits)), -Int(randomFloatBits))
+  return scalbn(Double(randomBits(num: randomFloatBits)), -Int(randomFloatBits))
 }
 
 // randomUniformInt returns a uniformly distributed integer in the range [0,n).

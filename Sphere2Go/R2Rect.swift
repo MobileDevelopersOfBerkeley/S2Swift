@@ -22,6 +22,10 @@ struct R2Point: Equatable, CustomStringConvertible {
   }
 
   // MARK: protocols
+
+  static func ==(lhs: R2Point, rhs: R2Point) -> Bool {
+    return lhs.x == rhs.x && lhs.y == rhs.y
+  }
   
   var description: String {
     return String(format: "[%f, %f]", x, y)
@@ -29,15 +33,7 @@ struct R2Point: Equatable, CustomStringConvertible {
   
 }
 
-func ==(lhs: R2Point, rhs: R2Point) -> Bool {
-  return lhs.x == rhs.x && lhs.y == rhs.y
-}
-
 // R2Rect represents a closed axis-aligned rectangle in the (x,y) plane.
-
-func ==(lhs: R2Rect, rhs: R2Rect) -> Bool {
-  return lhs.x == rhs.x && lhs.y == rhs.y
-}
 
 struct R2Rect: Equatable, CustomStringConvertible {
   let x: R1Interval
@@ -91,7 +87,11 @@ struct R2Rect: Equatable, CustomStringConvertible {
   static let empty = R2Rect(x: R1Interval.empty, y: R1Interval.empty)
 
   // MARK: protocols
-  
+
+  static func ==(lhs: R2Rect, rhs: R2Rect) -> Bool {
+    return lhs.x == rhs.x && lhs.y == rhs.y
+  }
+
   var description: String {
     return "X \(x), Y \(y)"
   }

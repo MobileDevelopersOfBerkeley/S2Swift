@@ -65,16 +65,16 @@ class S2LatLngTests: XCTestCase {
       let ll = LatLng(latDegrees: lat, lngDegrees: lng)
       let p = ll.toPoint()
       // TODO(mikeperrow): Port Point.ApproxEquals, then use here.
-      XCTAssertEqualWithAccuracy(p.x, x, accuracy: eps)
-      XCTAssertEqualWithAccuracy(p.y, y, accuracy: eps)
-      XCTAssertEqualWithAccuracy(p.z, z, accuracy: eps)
+      XCTAssertEqual(p.x, x, accuracy: eps)
+      XCTAssertEqual(p.y, y, accuracy: eps)
+      XCTAssertEqual(p.z, z, accuracy: eps)
       let ll2 = LatLng(point: p)
       // We need to be careful here, since if the latitude is +/- 90, any longitude
       // is now a valid conversion.
       let isPolar = (lat == 90 || lat == -90)
-      XCTAssertEqualWithAccuracy(ll2.lat, lat * toRadians, accuracy: eps)
+      XCTAssertEqual(ll2.lat, lat * toRadians, accuracy: eps)
       if !isPolar {
-        XCTAssertEqualWithAccuracy(ll2.lng, lng * toRadians, accuracy: eps)
+        XCTAssertEqual(ll2.lng, lng * toRadians, accuracy: eps)
       }
     }
   }
@@ -90,7 +90,7 @@ class S2LatLngTests: XCTestCase {
       let ll1 = LatLng(latDegrees: lat1, lngDegrees: lng1)
       let ll2 = LatLng(latDegrees: lat2, lngDegrees: lng2)
       let d = ll1.distance(ll2)
-      XCTAssertEqualWithAccuracy(d, want * toRadians, accuracy: tolerance)
+      XCTAssertEqual(d, want * toRadians, accuracy: tolerance)
     }
   }
 

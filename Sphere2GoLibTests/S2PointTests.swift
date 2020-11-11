@@ -26,7 +26,7 @@ class S2PointTests: XCTestCase {
   }
   
   func testOriginPoint() {
-    XCTAssertEqualWithAccuracy(S2Point.origin.v.norm(), 1.0, accuracy: 1e-16)
+    XCTAssertEqual(S2Point.origin.v.norm(), 1.0, accuracy: 1e-16)
   }
   
   func testPointCross() {
@@ -39,9 +39,9 @@ class S2PointTests: XCTestCase {
       let p1 = S2Point(x: p1x, y: p1y, z: p1z)
       let p2 = S2Point(x: p2x, y: p2y, z: p2z)
       let result = p1.pointCross(p2)
-      XCTAssertEqualWithAccuracy(result.v.norm(), 1, accuracy: 1e-15)
-      XCTAssertEqualWithAccuracy(result.v.dot(p1.v), 0, accuracy: 1e-15)
-      XCTAssertEqualWithAccuracy(result.v.dot(p2.v), 0, accuracy: 1e-15)
+      XCTAssertEqual(result.v.norm(), 1, accuracy: 1e-15)
+      XCTAssertEqual(result.v.dot(p1.v), 0, accuracy: 1e-15)
+      XCTAssertEqual(result.v.dot(p2.v), 0, accuracy: 1e-15)
     }
   }
 
@@ -188,8 +188,8 @@ class S2PointTests: XCTestCase {
     for (x1, y1, z1, x2, y2, z2, want) in tests {
       let p1 = S2Point(x: x1, y: y1, z: z1)
       let p2 = S2Point(x: x2, y: y2, z: z2)
-      XCTAssertEqualWithAccuracy(p1.distance(p2), want, accuracy: 1e-15)
-      XCTAssertEqualWithAccuracy(p2.distance(p1), want, accuracy: 1e-15)
+      XCTAssertEqual(p1.distance(p2), want, accuracy: 1e-15)
+      XCTAssertEqual(p2.distance(p1), want, accuracy: 1e-15)
     }
   }
 
@@ -254,7 +254,7 @@ class S2PointTests: XCTestCase {
       // Do we need that many? Will one or two suffice?
       (g1, g2, g3, 0.0, 1e-15)]
     for (a, b, c, want, nearness) in tests {
-      XCTAssertEqualWithAccuracy(S2Point.pointArea(a, b, c), want, accuracy: nearness)
+      XCTAssertEqual(S2Point.pointArea(a, b, c), want, accuracy: nearness)
     }
   }
 
@@ -272,7 +272,7 @@ class S2PointTests: XCTestCase {
         S2Point.pointArea(a, c, d) +
         S2Point.pointArea(a, d, e) +
         S2Point.pointArea(a, e, b)
-      XCTAssertEqualWithAccuracy(area, want, accuracy: 1e-15)
+      XCTAssertEqual(area, want, accuracy: 1e-15)
     }
   }
 
@@ -368,11 +368,11 @@ class S2PointTests: XCTestCase {
         let x1 = S2Cube(face: face, u: x, v: -1).vector()
         let x2 = S2Cube(face: face, u: x, v: 1).vector()
         let uNorm1 = S2Cube.uNorm(face: face, u: x, invert: false)
-        XCTAssertEqualWithAccuracy(x1.cross(x2).angle(uNorm1.v), 0.0, accuracy: 1e-15)
+        XCTAssertEqual(x1.cross(x2).angle(uNorm1.v), 0.0, accuracy: 1e-15)
         let y1 = S2Cube(face: face, u: -1, v: x).vector()
         let y2 = S2Cube(face: face, u: 1, v: x).vector()
         let vNorm1 = S2Cube.vNorm(face: face, v: x, invert: false)
-        XCTAssertEqualWithAccuracy(y1.cross(y2).angle(vNorm1.v), 0.0, accuracy: 1e-15)
+        XCTAssertEqual(y1.cross(y2).angle(vNorm1.v), 0.0, accuracy: 1e-15)
       }
     }
   }
@@ -401,8 +401,8 @@ class S2PointTests: XCTestCase {
         }
         continue
       }
-      XCTAssertEqualWithAccuracy(cube.u, u, accuracy: 1e-15)
-      XCTAssertEqualWithAccuracy(cube.v, v, accuracy: 1e-15)
+      XCTAssertEqual(cube.u, u, accuracy: 1e-15)
+      XCTAssertEqual(cube.v, v, accuracy: 1e-15)
     }
   }
   

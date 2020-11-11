@@ -63,7 +63,7 @@ struct S2Loop: Shape, S2Region {
 
   // constructs a loop from the given points
   init(points: [S2Point]) {
-    var vertices = points
+    let vertices = points
     // create preliminary loop object with empty bounds
 //    var l =
     // figure out origin
@@ -159,7 +159,7 @@ struct S2Loop: Shape, S2Region {
   
   // constructs a loop from the given points
   static func loopFromPoints(_ points: [S2Point]) -> S2Loop {
-    var vertices = points
+    let vertices = points
     // create preliminary loop object with empty bounds
     var l = S2Loop(vertices: points, originInside: false, bound: S2Rect.empty, subregionBound: S2Rect.empty)
     // figure out origin

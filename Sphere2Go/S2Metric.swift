@@ -35,7 +35,7 @@ struct Metric {
 
   // Value returns the value of the metric at the given level.
   func value(_ level: Int) -> Double {
-    return ldexp(deriv, -dim * level)
+    return scalbn(deriv, -dim * level)
   }
 
   // MinLevel returns the minimum level such that the metric is at most

@@ -30,7 +30,11 @@ class CellUnion: S2Region, Equatable {
   }
   
   // MARK: protocols
-  
+
+  static func ==(lhs: CellUnion, rhs: CellUnion) -> Bool {
+    return lhs.cellIds == rhs.cellIds
+  }
+
   subscript(i: Int) -> CellId {
     get {
       return cellIds[i]
@@ -222,8 +226,4 @@ class CellUnion: S2Region, Equatable {
     return false
   }
   
-}
-
-func ==(lhs: CellUnion, rhs: CellUnion) -> Bool {
-  return lhs.cellIds == rhs.cellIds
 }

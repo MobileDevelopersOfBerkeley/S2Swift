@@ -73,7 +73,7 @@ struct S2Rect: S2Region {
 
   // IsFull reports whether the rectangle is full.
   func isFull() -> Bool {
-    return lat.equals(S2Rect.validRectLatRange) && lng.isFull()
+    return lat == S2Rect.validRectLatRange && lng.isFull()
   }
 
   // IsPoint reports whether the rectangle is a single point.

@@ -22,19 +22,19 @@ class R3R3VectorTests: XCTestCase {
   }
   
   func testNorm() {
-    XCTAssertEqualWithAccuracy(v(0, 0, 0).norm(), 0.0, accuracy: 1e-14)
-    XCTAssertEqualWithAccuracy(v(0, 1, 0).norm(), 1.0, accuracy: 1e-14)
-    XCTAssertEqualWithAccuracy(v(3, -4, 12).norm(), 13.0, accuracy: 1e-14)
-    XCTAssertEqualWithAccuracy(v(1, 1e-16, 1e-32).norm(), 1.0, accuracy: 1e-14)
+    XCTAssertEqual(v(0, 0, 0).norm(), 0.0, accuracy: 1e-14)
+    XCTAssertEqual(v(0, 1, 0).norm(), 1.0, accuracy: 1e-14)
+    XCTAssertEqual(v(3, -4, 12).norm(), 13.0, accuracy: 1e-14)
+    XCTAssertEqual(v(1, 1e-16, 1e-32).norm(), 1.0, accuracy: 1e-14)
   }
 
   func testNorm2() {
-    XCTAssertEqualWithAccuracy(v(0, 0, 0).norm2(), 0.0, accuracy: 1e-14)
-    XCTAssertEqualWithAccuracy(v(0, 1, 0).norm2(), 1.0, accuracy: 1e-14)
-    XCTAssertEqualWithAccuracy(v(1, 1, 1).norm2(), 3.0, accuracy: 1e-14)
-    XCTAssertEqualWithAccuracy(v(1, 2, 3).norm2(), 14.0, accuracy: 1e-14)
-    XCTAssertEqualWithAccuracy(v(3, -4, 12).norm2(), 169.0, accuracy: 1e-14)
-    XCTAssertEqualWithAccuracy(v(1, 1e-16, 1e-32).norm2(), 1.0, accuracy: 1e-14)
+    XCTAssertEqual(v(0, 0, 0).norm2(), 0.0, accuracy: 1e-14)
+    XCTAssertEqual(v(0, 1, 0).norm2(), 1.0, accuracy: 1e-14)
+    XCTAssertEqual(v(1, 1, 1).norm2(), 3.0, accuracy: 1e-14)
+    XCTAssertEqual(v(1, 2, 3).norm2(), 14.0, accuracy: 1e-14)
+    XCTAssertEqual(v(3, -4, 12).norm2(), 169.0, accuracy: 1e-14)
+    XCTAssertEqual(v(1, 1e-16, 1e-32).norm2(), 1.0, accuracy: 1e-14)
   }
 
   func testNormalize() {
@@ -42,9 +42,9 @@ class R3R3VectorTests: XCTestCase {
     for v1 in vectors {
       let v = R3Vector(x: v1.0, y: v1.1, z: v1.2)
       let nv = v.normalize()
-      XCTAssertEqualWithAccuracy(v.x*nv.y, v.y*nv.x, accuracy: 1e-14)
-      XCTAssertEqualWithAccuracy(v.x*nv.z, v.z*nv.x, accuracy: 1e-14)
-      XCTAssertEqualWithAccuracy(nv.norm(), 1.0, accuracy: 1e-14)
+      XCTAssertEqual(v.x*nv.y, v.y*nv.x, accuracy: 1e-14)
+      XCTAssertEqual(v.x*nv.z, v.z*nv.x, accuracy: 1e-14)
+      XCTAssertEqual(nv.norm(), 1.0, accuracy: 1e-14)
     }
   }
   
@@ -71,8 +71,8 @@ class R3R3VectorTests: XCTestCase {
     for (v1, v2, want) in tests {
       let v1 = v(v1.x, v1.y, v1.z)
       let v2 = v(v2.x, v2.y, v2.z)
-      XCTAssertEqualWithAccuracy(v1.dot(v2), want, accuracy: 1e-15)
-      XCTAssertEqualWithAccuracy(v2.dot(v1), want, accuracy: 1e-15)
+      XCTAssertEqual(v1.dot(v2), want, accuracy: 1e-15)
+      XCTAssertEqual(v2.dot(v1), want, accuracy: 1e-15)
     }
   }
       
@@ -119,8 +119,8 @@ class R3R3VectorTests: XCTestCase {
     for (v1, v2, want) in tests {
       let v1 = v(v1.x, v1.y, v1.z)
       let v2 = v(v2.x, v2.y, v2.z)
-      XCTAssertEqualWithAccuracy(v1.distance(v2), want, accuracy: 1e-13)
-      XCTAssertEqualWithAccuracy(v1.distance(v2), want, accuracy: 1e-13)
+      XCTAssertEqual(v1.distance(v2), want, accuracy: 1e-13)
+      XCTAssertEqual(v1.distance(v2), want, accuracy: 1e-13)
     }
   }
   
@@ -145,8 +145,8 @@ class R3R3VectorTests: XCTestCase {
       (v(1, 0, 0), v(-1, 0, 0), .pi),
       (v(1, 2, 3), v(2, 3, -1), 1.2055891055045298)]
     for (v1, v2, want) in tests {
-      XCTAssertEqualWithAccuracy(v1.angle(v2), want, accuracy: 1e-15)
-      XCTAssertEqualWithAccuracy(v2.angle(v1), want, accuracy: 1e-15)
+      XCTAssertEqual(v1.angle(v2), want, accuracy: 1e-15)
+      XCTAssertEqual(v2.angle(v1), want, accuracy: 1e-15)
     }
   }
   
@@ -159,8 +159,8 @@ class R3R3VectorTests: XCTestCase {
       v(0.012, 0.0053, 0.00457),
       v(-0.012, -1, -0.00457)]
     for v in vectors {
-      XCTAssertEqualWithAccuracy(v.dot(v.ortho()), 0, accuracy: 1e-15)
-      XCTAssertEqualWithAccuracy(v.ortho().norm(), 1, accuracy: 1e-15)
+      XCTAssertEqual(v.dot(v.ortho()), 0, accuracy: 1e-15)
+      XCTAssertEqual(v.ortho().norm(), 1, accuracy: 1e-15)
     }
   }
   
@@ -180,14 +180,14 @@ class R3R3VectorTests: XCTestCase {
       let d1 = v1.dot(v2)
       let d2 = v2.dot(v1)
       // Angle commutes
-      XCTAssertEqualWithAccuracy(a1, a2, accuracy: 1e-15)
+      XCTAssertEqual(a1, a2, accuracy: 1e-15)
       // Dot commutes
-      XCTAssertEqualWithAccuracy(d1, d2, accuracy: 1e-15)
+      XCTAssertEqual(d1, d2, accuracy: 1e-15)
       // Cross anti-commutes
       XCTAssert(c1.approxEquals(c2.mul(-1.0)))
       // Cross is orthogonal to original vectors
-      XCTAssertEqualWithAccuracy(v1.dot(c1), 0.0, accuracy: 1e-15)
-      XCTAssertEqualWithAccuracy(v2.dot(c1), 0.0, accuracy: 1e-15)
+      XCTAssertEqual(v1.dot(c1), 0.0, accuracy: 1e-15)
+      XCTAssertEqual(v2.dot(c1), 0.0, accuracy: 1e-15)
     }
   }
 

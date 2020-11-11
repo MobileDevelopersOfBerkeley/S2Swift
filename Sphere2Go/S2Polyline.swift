@@ -9,7 +9,7 @@ import Foundation
 // Polyline represents a sequence of zero or more vertices connected by
 // straight edges (geodesics). Edges of length 0 and 180 degrees are not
 // allowed, i.e. adjacent vertices should not be identical or antipodal.
-struct S2Polyline: Shape {
+struct S2Polyline: Shape, Equatable {
  
   let points: [S2Point]
   
@@ -23,6 +23,13 @@ struct S2Polyline: Shape {
     self.init(points: points)
   }
 
+  // Mark protocols
+  
+  // Polylines are equal when their points are equal. Rotation does not maintain equality
+  static func ==(lhs: S2Polyline, rhs: S2Polyline) -> Bool {
+    return lhs.points == rhs.points
+  }
+  
   // Reverse reverses the order of the Polyline vertices.
   func reversed() -> S2Polyline {
     return S2Polyline(points: points.reversed())
@@ -54,19 +61,6 @@ struct S2Polyline: Shape {
       centroid = centroid.add(vSum.mul(sqrt(vDiff.norm2() / vSum.norm2())))
     }
     return centroid
-  }
-  
-  // Equals reports whether the given Polyline is exactly the same as this one.
-  func equals(_ b: S2Polyline) -> Bool {
-    if points.count != b.points.count {
-      return false
-    }
-    for i in 0..<points.count {
-      if points[i] != b.points[i] {
-        return false
-      }
-    }
-    return true
   }
   
   // CapBound returns the bounding Cap for this Polyline.
@@ -146,7 +140,6 @@ struct S2Polyline: Shape {
     if i == 0 {
       return 0
     }
-    
     return numEdges()
   }
   

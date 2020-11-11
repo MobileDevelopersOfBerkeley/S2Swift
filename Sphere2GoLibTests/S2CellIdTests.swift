@@ -267,10 +267,10 @@ class S2CellIdTests: XCTestCase {
   
     for (i, j, level, want) in tests {
       let uv = CellId.ijLevelToBoundUV(i: i, j: j, level: level)
-      XCTAssertEqualWithAccuracy(uv.x.lo, want.x.lo, accuracy: 1e-14)
-      XCTAssertEqualWithAccuracy(uv.x.hi, want.x.hi, accuracy: 1e-14)
-      XCTAssertEqualWithAccuracy(uv.y.lo, want.y.lo, accuracy: 1e-14)
-      XCTAssertEqualWithAccuracy(uv.y.hi, want.y.hi, accuracy: 1e-14)
+      XCTAssertEqual(uv.x.lo, want.x.lo, accuracy: 1e-14)
+      XCTAssertEqual(uv.x.hi, want.x.hi, accuracy: 1e-14)
+      XCTAssertEqual(uv.y.lo, want.y.lo, accuracy: 1e-14)
+      XCTAssertEqual(uv.y.hi, want.y.hi, accuracy: 1e-14)
     }
   }
   

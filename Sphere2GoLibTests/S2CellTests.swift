@@ -46,9 +46,9 @@ class S2CellTests: XCTestCase {
       for k in 0..<4 {
         edgeCounts[edges[k]] = (edgeCounts[edges[k]] ?? 0) + 1
         vertexCounts[vertices[k]] = (vertexCounts[vertices[k]] ?? 0) + 1
-        XCTAssertEqualWithAccuracy(vertices[k].dot(edges[k]), 0.0, accuracy: 1e-14)
-        XCTAssertEqualWithAccuracy(vertices[(k + 1) & 3].dot(edges[k]), 0.0, accuracy: 1e-14)
-        XCTAssertEqualWithAccuracy(vertices[k].cross(vertices[(k + 1) & 3]).normalize().dot(edges[k]), 1.0, accuracy: 1e-14)
+        XCTAssertEqual(vertices[k].dot(edges[k]), 0.0, accuracy: 1e-14)
+        XCTAssertEqual(vertices[(k + 1) & 3].dot(edges[k]), 0.0, accuracy: 1e-14)
+        XCTAssertEqual(vertices[k].cross(vertices[(k + 1) & 3]).normalize().dot(edges[k]), 1.0, accuracy: 1e-14)
       }
     }
     // Check that edges have multiplicity 2 and vertices have multiplicity 3.
@@ -68,7 +68,7 @@ class S2CellTests: XCTestCase {
     // Test 1. Check the area of a top level cell.
     let level1Cell = CellId(id: 0x1000000000000000)
     let wantArea = 4.0 * .pi / 6.0
-    XCTAssertEqualWithAccuracy(Cell(id: level1Cell).exactArea(), wantArea, accuracy: 1e-14)
+    XCTAssertEqual(Cell(id: level1Cell).exactArea(), wantArea, accuracy: 1e-14)
     // Test 2. Iterate inwards from this cell, checking at every level that
     // the sum of the areas of the children is equal to the area of the parent.
     var childIndex = 1
@@ -82,7 +82,7 @@ class S2CellTests: XCTestCase {
         approxArea += Cell(id: child).approxArea()
         avgArea += Cell(id: child).averageArea()
       }
-      XCTAssertEqualWithAccuracy(Cell(id: cell).exactArea(), exactArea, accuracy: 1e-14)
+      XCTAssertEqual(Cell(id: cell).exactArea(), exactArea, accuracy: 1e-14)
       childIndex = (childIndex + 1) % 4
       // For ExactArea(), the best relative error we can expect is about 1e-6
       // because the precision of the unit vector coordinates is only about 1e-15

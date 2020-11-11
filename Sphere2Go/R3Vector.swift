@@ -8,11 +8,6 @@ import Foundation
 // package r3
 // import fmt, math, s1
 
-func ==(lhs: R3Vector, rhs: R3Vector) -> Bool {
-  return lhs.x == rhs.x && lhs.y == rhs.y && lhs.z == rhs.z
-}
-
-
 // R3Vector represents a point in ℝ³.
 struct R3Vector: Equatable, CustomStringConvertible, Hashable {
   
@@ -32,14 +27,15 @@ struct R3Vector: Equatable, CustomStringConvertible, Hashable {
   }
 
   // MARK: protocols
-  
+
+  static func ==(lhs: R3Vector, rhs: R3Vector) -> Bool {
+    return lhs.x == rhs.x && lhs.y == rhs.y && lhs.z == rhs.z
+  }
+
   var description: String {
     return "(\(x), \(y), \(z))"
   }
-  var hashValue: Int {
-    return x.hashValue ^ y.hashValue ^ z.hashValue
-  }
-  
+
   // MARK: tests
   
   // ApproxEqual reports whether v and other are equal within a small epsilon.

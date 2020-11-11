@@ -170,7 +170,7 @@ class S2CapTests: XCTestCase {
       (.pi, S2Cap.fullHeight),
       (4.0, S2Cap.fullHeight)]
     for (got, want) in tests {
-      XCTAssertEqualWithAccuracy(S2Cap.radiusToHeight(got), want, accuracy: 1e-14)
+      XCTAssertEqual(S2Cap.radiusToHeight(got), want, accuracy: 1e-14)
     }
   }
   
@@ -186,10 +186,10 @@ class S2CapTests: XCTestCase {
   
     for (_, have, latLoDeg, latHiDeg, lngLoDeg, lngHiDeg, isFull) in tests {
       let r = have.rectBound()
-      XCTAssertEqualWithAccuracy(r.lat.lo, latLoDeg * toRadians, accuracy: epsilon)
-      XCTAssertEqualWithAccuracy(r.lat.hi, latHiDeg * toRadians, accuracy: epsilon)
-      XCTAssertEqualWithAccuracy(r.lng.lo, lngLoDeg * toRadians, accuracy: epsilon)
-      XCTAssertEqualWithAccuracy(r.lng.hi, lngHiDeg * toRadians, accuracy: epsilon)
+      XCTAssertEqual(r.lat.lo, latLoDeg * toRadians, accuracy: epsilon)
+      XCTAssertEqual(r.lat.hi, latHiDeg * toRadians, accuracy: epsilon)
+      XCTAssertEqual(r.lng.lo, lngLoDeg * toRadians, accuracy: epsilon)
+      XCTAssertEqual(r.lng.hi, lngHiDeg * toRadians, accuracy: epsilon)
       XCTAssertEqual(r.lng.isFull(), isFull)
     }
     // Empty and full caps.

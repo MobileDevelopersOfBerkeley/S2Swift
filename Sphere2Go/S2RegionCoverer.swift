@@ -164,6 +164,16 @@ class Candidate: Comparable {
     self.terminal = terminal
   }
   
+  // MARK: protocols
+
+  static func ==(lhs: Candidate, rhs: Candidate) -> Bool {
+    return lhs.priority == rhs.priority
+  }
+
+  static func <(lhs: Candidate, rhs: Candidate) -> Bool {
+    return lhs.priority < rhs.priority
+  }
+
   // MARK: methods
   
   func addChild(_ child: Candidate) {
@@ -171,14 +181,6 @@ class Candidate: Comparable {
     numChildren += 1
   }
   
-}
-
-func ==(lhs: Candidate, rhs: Candidate) -> Bool {
-  return lhs.priority == rhs.priority
-}
-
-func <(lhs: Candidate, rhs: Candidate) -> Bool {
-  return lhs.priority < rhs.priority
 }
 
 

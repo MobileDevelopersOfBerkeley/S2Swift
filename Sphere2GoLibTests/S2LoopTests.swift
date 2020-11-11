@@ -173,7 +173,7 @@ class S2LoopTests: XCTestCase {
     let arctic80Inv = invert(l: arctic80)
     // The highest latitude of each edge is attained at its midpoint.
     let mid = arctic80Inv.vertices[0].v.add(arctic80Inv.vertices[1].v).mul(0.5)
-    XCTAssertEqualWithAccuracy(arctic80Inv.rectBound().lat.hi, Double(LatLng(point: S2Point(raw: mid)).lat), accuracy: 10 * Cell.dblEpsilon)
+    XCTAssertEqual(arctic80Inv.rectBound().lat.hi, Double(LatLng(point: S2Point(raw: mid)).lat), accuracy: 10 * Cell.dblEpsilon)
   }
   
   func testLoopCapBound() {

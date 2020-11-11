@@ -64,14 +64,14 @@ class S1IntervalTests: XCTestCase {
   }
   
   func testCenter() {
-    XCTAssertEqualWithAccuracy(quad12.center(), .pi / 2, accuracy: 1e-15)
-    XCTAssertEqualWithAccuracy(S1Interval(lo_endpoint: 3.1, hi_endpoint: 2.9).center(), 3 - .pi, accuracy: 1e-15)
-    XCTAssertEqualWithAccuracy(S1Interval(lo_endpoint: -2.9, hi_endpoint: -3.1).center(), .pi - 3, accuracy: 1e-15)
-    XCTAssertEqualWithAccuracy(S1Interval(lo_endpoint: 2.1, hi_endpoint: -2.1).center(), .pi, accuracy: 1e-15)
-    XCTAssertEqualWithAccuracy(pi.center(), .pi, accuracy: 1e-15)
-    XCTAssertEqualWithAccuracy(mipi.center(), .pi, accuracy: 1e-15)
-    XCTAssertEqualWithAccuracy(quad23.center(), .pi, accuracy: 1e-15)
-    XCTAssertEqualWithAccuracy(quad123.center(), 0.75 * .pi, accuracy: 1e-15)
+    XCTAssertEqual(quad12.center(), .pi / 2, accuracy: 1e-15)
+    XCTAssertEqual(S1Interval(lo_endpoint: 3.1, hi_endpoint: 2.9).center(), 3 - .pi, accuracy: 1e-15)
+    XCTAssertEqual(S1Interval(lo_endpoint: -2.9, hi_endpoint: -3.1).center(), .pi - 3, accuracy: 1e-15)
+    XCTAssertEqual(S1Interval(lo_endpoint: 2.1, hi_endpoint: -2.1).center(), .pi, accuracy: 1e-15)
+    XCTAssertEqual(pi.center(), .pi, accuracy: 1e-15)
+    XCTAssertEqual(mipi.center(), .pi, accuracy: 1e-15)
+    XCTAssertEqual(quad23.center(), .pi, accuracy: 1e-15)
+    XCTAssertEqual(quad123.center(), 0.75 * .pi, accuracy: 1e-15)
   }
   
 }

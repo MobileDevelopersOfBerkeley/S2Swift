@@ -16,10 +16,6 @@ prefix func -(id: UInt32) -> UInt32 {
   return UInt32(bitPattern: -Int32(bitPattern: id))
 }
 
-func ==(lhs:CellId, rhs: CellId) -> Bool {
-  return lhs.id == rhs.id
-}
-
 // CellId uniquely identifies a cell in the S2 cell decomposition.
 // The most significant 3 bits encode the face number (0-5). The
 // remaining 61 bits encode the position of the center of this cell
@@ -29,7 +25,7 @@ func ==(lhs:CellId, rhs: CellId) -> Bool {
 // The major differences from the C++ version is that barely anything is implemented.
 struct CellId: Equatable, Hashable {
   
-  // TODO(dsymonds): Some of these constants should probably be exported.
+  //
   static let faceBits = 3
   static let numFaces = 6
   static let maxLevel = 30
@@ -86,7 +82,11 @@ struct CellId: Equatable, Hashable {
   }
   
   // MARK: protocols
-  
+
+  static func ==(lhs:CellId, rhs: CellId) -> Bool {
+    return lhs.id == rhs.id
+  }
+
   // String returns the string representation of the cell ID in the form "1/3210".
   var description: String {
     if !isValid() {
@@ -98,11 +98,7 @@ struct CellId: Equatable, Hashable {
     }
     return "\(face())/\(s)"
   }
-  
-  var hashValue: Int {
-    return id.hashValue
-  }
-  
+    
   // MARK: string token
   
   func toToken() -> String {
@@ -426,9 +422,6 @@ struct CellId: Equatable, Hashable {
 //    return CellIdSequence(parent: self, level: level)
 //  }
   
-  // TODO: the methods below are not exported yet.  Settle on the entire API design
-  // before doing this.  Do we want to mirror the C++ one as closely as possible?
-
   // rawPoint returns an unnormalized r3 vector from the origin through the center
   // of the s2 cell on the sphere.
   func rawPoint() -> R3Vector {
